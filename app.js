@@ -222,7 +222,7 @@ function mailTemp(text,subject){
           <!-- END FOOTER -->
 
         <!-- END CENTERED WHITE CONTAINER -->
-        </div>
+        </div>gg
       </td>
       <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
     </tr>
