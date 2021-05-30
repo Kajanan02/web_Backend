@@ -280,7 +280,7 @@ app.post('/send-notification',(req, res) => {
 
   var mailOptions = {
     from: '"SenzMate Website" <keerthi@senzmate.com>',
-    to: `bruntha@senzmate.com,kajanan02000@gmail.com`,
+    to: `jey@senzmate.com`,
     subject: sub,
     html:body
   };
