@@ -1,22 +1,25 @@
 const express = require('express');
 const Ajv = require('ajv');
-var cors = require('cors');
+const cors = require('cors');
+const multer = require('multer');
+const bodyParser = require('body-parser');
+const nodemailer = require('nodemailer');
+const base64 = require('base64topdf');
+
+
 const app = express();
 const port = 3001;
 const ajv = new Ajv();
-const multer = require('multer');
-var bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json({limit: '50mb'}));
-var nodemailer = require('nodemailer');
-const base64 = require('base64topdf');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(cors());
 
-var mail = nodemailer.createTransport({
+const mail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'partnerships@senzmate.com',
-    pass: 'Senz&Partner00'
+    user: 'keerthi@senzmate.com',
+    pass: 'mitwxjdvvpkjydak'
   }
 });
 
@@ -235,7 +238,7 @@ function mailTemp(text,subject){
 
 app.post('/send',bodyValidate,(req, res) => {
   let decodedBase64 = base64.base64Decode(req.body.pdf64, 'report.pdf');
-  
+
   var mailOptions = {
     from: '"SenzMate" <partnerships@senzmate.com>',
     to: `${req.body.to.map((item)=>`${item},`)}`,
@@ -259,6 +262,28 @@ app.post('/send',bodyValidate,(req, res) => {
 
 
   
+});
+
+app.post('/send-notification',(req, res) => {
+
+  console.log(req.body);
+  let sub = "A New "+req.body.type+" Application is submitted";
+  let body = "Hi,<br><br> A new " + req.body.type + " Application has been submitted via website, please check it here.<br>";
+
+  var mailOptions = {
+    from: '"SenzMate" <keerthi@senzmate.com>',
+    to: `bruntha@senzmate.com,kajanan02000@gmail.com`,
+    subject: sub,
+    html:body
+  };
+  mail.sendMail(mailOptions,function(err,response){
+    if(err){
+      res.status(500).send(err);
+    }else{
+      res.send(response);
+    }
+  });
+
 });
 
 
