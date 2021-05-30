@@ -266,12 +266,20 @@ app.post('/send',bodyValidate,(req, res) => {
 
 app.post('/send-notification',(req, res) => {
 
-  console.log(req.body);
-  let sub = "A New "+req.body.type+" Application is submitted";
-  let body = "Hi,<br><br> A new " + req.body.type + " Application has been submitted via website, please check it here.<br>";
+  let sub = "A new "+req.body.type+" application is submitted";
+  let body = "Hi,<br><br> A new " + req.body.type + " application has been submitted via website, please check it here.<br>";
+
+
+  if (req.body.type === "CAREER") {
+    body = body + "https://docs.google.com/spreadsheets/d/1xPNYkyGGXe93iS1W-UvADJaMf6XID_ggMi-o7h0Wc0s/edit#gid=0"
+  }else if (req.body.type === "CONTACT US") {
+    body = body + "https://docs.google.com/spreadsheets/d/1sF2x-2QVdprcubWkPcurcG0Kq9ENBxJ_OBPdInFi43c/edit#gid=0"
+  }else if (req.body.type === "NEWS LETTER") {
+    body = body + "https://docs.google.com/spreadsheets/d/1iYbUJSHUgKld2Ggt2GKzMpVfrfYGJvDJNDot6dejnbM/edit#gid=0"
+  }
 
   var mailOptions = {
-    from: '"SenzMate" <keerthi@senzmate.com>',
+    from: '"SenzMate Website" <keerthi@senzmate.com>',
     to: `bruntha@senzmate.com,kajanan02000@gmail.com`,
     subject: sub,
     html:body
