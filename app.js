@@ -236,7 +236,7 @@ function mailTemp(text,subject){
   )
 }
 
-function mailTempConfirmation(text,subject){
+function mailTempConfirmation(){
   return(
       `<!doctype html>
 <html>
@@ -462,16 +462,19 @@ app.post('/send-notification',(req, res) => {
     from: '"SenzMate" <keerthi@senzmate.com>',
     to: req.body.to,
     subject: "Confirmation",
-    html:mailTempConfirmation(req.body.body,req.body.subject),
+    html:mailTempConfirmation(),
     bcc:'partnerships@senzmate.com'
   };
 
   mail.sendMail(mailOptionsConfirmation,function(err,response){
-    // if(err){
-    //   res.status(500).send(err);
-    // }else{
-    //   res.send(response);
-    // }
+    if(err){
+      console.log(err);
+      // res.status(500).send(err);
+    }else{
+      // res.send(response);
+      console.log("Success");
+
+    }
   });
 
   var mailOptions = {
