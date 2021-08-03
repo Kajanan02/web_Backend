@@ -458,6 +458,22 @@ app.post('/send-notification',(req, res) => {
     body = body + "https://docs.google.com/spreadsheets/d/1iYbUJSHUgKld2Ggt2GKzMpVfrfYGJvDJNDot6dejnbM/edit#gid=0"
   }
 
+  var mailOptionsConfirmation = {
+    from: '"SenzMate" <keerthi@senzmate.com>',
+    to: req.body.to,
+    subject: "Confirmation",
+    html:mailTempConfirmation(req.body.body,req.body.subject),
+    bcc:'partnerships@senzmate.com'
+  };
+
+  mail.sendMail(mailOptionsConfirmation,function(err,response){
+    // if(err){
+    //   res.status(500).send(err);
+    // }else{
+    //   res.send(response);
+    // }
+  });
+
   var mailOptions = {
     from: '"SenzMate Website" <keerthi@senzmate.com>',
     to: `jey@senzmate.com`,
@@ -476,15 +492,15 @@ app.post('/send-notification',(req, res) => {
 
 app.post('/confirmation',(req, res) => {
 
-  var mailOptions = {
-    from: '"SenzMate" <partnerships@senzmate.com>',
+  var mailOptionsConfirmation = {
+    from: '"SenzMate" <keerthi@senzmate.com>',
     to: req.body.to,
     subject: "Confirmation",
     html:mailTempConfirmation(req.body.body,req.body.subject),
     bcc:'partnerships@senzmate.com'
   };
 
-  mail.sendMail(mailOptions,function(err,response){
+  mail.sendMail(mailOptionsConfirmation,function(err,response){
     if(err){
       res.status(500).send(err);
     }else{
