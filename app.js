@@ -472,7 +472,7 @@ app.post('/send-notification',(req, res) => {
       // res.status(500).send(err);
     }else{
       // res.send(response);
-      console.log("Success");
+      console.log(response);
 
     }
   });
