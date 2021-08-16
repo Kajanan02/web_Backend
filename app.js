@@ -816,26 +816,33 @@ app.post('/send-notification',(req, res) => {
     body = body + "https://docs.google.com/spreadsheets/d/1sF2x-2QVdprcubWkPcurcG0Kq9ENBxJ_OBPdInFi43c/edit#gid=0"
   }else if (req.body.type === "NEWS LETTER") {
     body = body + "https://docs.google.com/spreadsheets/d/1iYbUJSHUgKld2Ggt2GKzMpVfrfYGJvDJNDot6dejnbM/edit#gid=0"
+  }else if (req.body.type === "BOOK A DEMO") {
+    body = body + "https://docs.google.com/spreadsheets/d/1sF2x-2QVdprcubWkPcurcG0Kq9ENBxJ_OBPdInFi43c/edit#gid=0"
+  }else if (req.body.type === "GET IN TOUCH") {
+    body = body + "https://docs.google.com/spreadsheets/d/1iYbUJSHUgKld2Ggt2GKzMpVfrfYGJvDJNDot6dejnbM/edit#gid=0"
   }
 
-  var mailOptionsConfirmation = {
-    from: '"SenzMate" <keerthi@senzmate.com>',
-    to: req.body.to,
-    subject: "Confirmation",
-    html:mailTempConfirmation(),
-    bcc:'partnerships@senzmate.com'
-  };
+  if (req.body.type === "CAREER") {
+    var mailOptionsConfirmation = {
+      from: '"SenzMate" <keerthi@senzmate.com>',
+      to: req.body.to,
+      subject: "Confirmation",
+      html:mailTempConfirmation(),
+      bcc:'partnerships@senzmate.com'
+    };
 
-  mail.sendMail(mailOptionsConfirmation,function(err,response){
-    if(err){
-      console.log(err);
-      // res.status(500).send(err);
-    }else{
-      // res.send(response);
-      console.log(response);
+    mail.sendMail(mailOptionsConfirmation,function(err,response){
+      if(err){
+        console.log(err);
+        // res.status(500).send(err);
+      }else{
+        // res.send(response);
+        console.log(response);
 
-    }
-  });
+      }
+    });
+  }
+
 
   var mailOptions = {
     from: '"SenzMate Website" <keerthi@senzmate.com>',
