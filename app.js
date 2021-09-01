@@ -18,8 +18,8 @@ app.use(cors());
 const mail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'keerthi@senzmate.com',
-    pass: 'mitwxjdvvpkjydak'
+    user: 'info@senzmate.com',
+    pass: 'mfdeycpsvlwjcqje'
   }
 });
 
@@ -1230,7 +1230,7 @@ app.post('/send-notification',(req, res) => {
 
   if (req.body.type === "CAREER") {
     var mailOptionsConfirmation = {
-      from: '"SenzMate" <keerthi@senzmate.com>',
+      from: '"SenzMate" <info@senzmate.com>',
       to: req.body.to,
       subject: "Confirmation",
       html:mailTempConfirmation(),
@@ -1249,7 +1249,7 @@ app.post('/send-notification',(req, res) => {
     });
   }else if(req.body.type === "NEWS LETTER") {
     var mailOptionsConfirmationNews = {
-      from: '"SenzMate" <keerthi@senzmate.com>',
+      from: '"SenzMate" <info@senzmate.com>',
       to: req.body.to,
       subject: "Confirmation",
       html:mailTempNewsLetterConfirmation(),
@@ -1268,7 +1268,7 @@ app.post('/send-notification',(req, res) => {
     });
   }else {
     var mailOptionsConfirmationOther = {
-      from: '"SenzMate" <keerthi@senzmate.com>',
+      from: '"SenzMate" <info@senzmate.com>',
       to: req.body.to,
       subject: "Confirmation",
       html:mailTempOtherConfirmation(),
@@ -1289,7 +1289,7 @@ app.post('/send-notification',(req, res) => {
 
 
   var mailOptions = {
-    from: '"SenzMate Website" <keerthi@senzmate.com>',
+    from: '"SenzMate Website" <info@senzmate.com>',
     to: `jey@senzmate.com`,
     subject: sub,
     html:body
@@ -1307,7 +1307,7 @@ app.post('/send-notification',(req, res) => {
 app.post('/confirmation',(req, res) => {
 
   var mailOptionsConfirmation = {
-    from: '"SenzMate" <keerthi@senzmate.com>',
+    from: '"SenzMate" <info@senzmate.com>',
     to: req.body.to,
     subject: "Confirmation",
     html:mailTempConfirmation(req.body.body,req.body.subject),
@@ -1327,7 +1327,7 @@ app.post('/confirmation',(req, res) => {
 app.post('/book-a-demo',(req, res) => {
 
   var mailOptionsConfirmation = {
-    from: '"SenzMate" <keerthi@senzmate.com>',
+    from: '"SenzMate" <info@senzmate.com>',
     to: req.body.to,
     subject: "Confirmation",
     html:mailTempBookADemo(),
@@ -1347,7 +1347,7 @@ app.post('/book-a-demo',(req, res) => {
 app.post('/get-in-touch',(req, res) => {
 
   var mailOptionsConfirmation = {
-    from: '"SenzMate" <keerthi@senzmate.com>',
+    from: '"SenzMate" <info@senzmate.com>',
     to: req.body.to,
     subject: "Confirmation",
     html:mailTempGetInTouch(),
