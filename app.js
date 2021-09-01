@@ -351,7 +351,7 @@ function mailTempConfirmation(){
       style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
 <span class="preheader"
       style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
-Senzmate
+SenzMate IoT Intelligence
 </span>
 <table border="0" cellpadding="0" cellspacing="0" class="body"
        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
@@ -361,11 +361,11 @@ Senzmate
             style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;">
             <div class="content"
                  style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
-   <div style="padding: 20px;">
-                
-                <img  src="https://senzmate-website.s3.ap-south-1.amazonaws.com/senzmae-logo.jpeg" style="mix-blend-mode: multiply;"/>
-</div>
-             
+                <div style="padding: 20px;">
+
+                    <img  src="https://senzmate-website.s3.ap-south-1.amazonaws.com/senzmae-logo.jpeg" style="mix-blend-mode: multiply;"/>
+                </div>
+
 
 
                 <!-- START CENTERED WHITE CONTAINER -->
@@ -380,9 +380,10 @@ Senzmate
                                    style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                 <tr>
                                     <span class="apple-link"
-                                          style="color: #999999; font-size: 12px; text-align: center;">Hi, <br>
-                                        Thanks for your interest to join our team. We are honored to have you in our journey. <br>
+                                          style="color: #333333; font-size: 16px; line-height: 24px; text-align: center;">Hi, <br>
+                                        Thanks for your interest to join our team. We are honored to have you in our journey. <br><br>
                                         We will reach you when your preference matches our requirement <br> <br>
+                                       Sincerely.<br/>
                                         SenzMate Team
                                     </span>
 
@@ -395,23 +396,23 @@ Senzmate
                 </table>
 
                 <!-- START FOOTER -->
-                <div class="footer" style="clear: both; Margin-top: 10px; width: 100%;">
+                <div class="footer" style="clear: both; width: 100%;">
                     <table border="0" cellpadding="0" cellspacing="0"
                            style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
-                        <tr>
+                        <tr style="background-color:  #F7F9FC;">
                             <td class="content-block"
-                                style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; padding-left: 20px">
-                               
-                              <span class="apple-link" style="color: #999999; font-size: 12px; text-align: left;"> SenzMate (Pvt) Ltd, <br> 27/1, 1/1, Melbourne Avenue, <br> Colombo 04, <br> Sri Lanka.</span>
+                                style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 14px; line-height: 20px; color: #333333; padding-left: 20px">
 
-                               <div style="text-align: center">
-                             <a target="_blank" href="https://www.linkedin.com/company/senzmate-iot-solutions/">  <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/linkdin.png"/></a>
-                            <a target="_blank" href="https://www.facebook.com/SenzMate">    <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/facebook.png"/> </a>
-                           <a target="_blank" href="https://twitter.com/SenzMate">     <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/twitter.png"/> </a>
-                           
-                               
-                               
-                                  </div>
+                                <span class="apple-link" style="color: #333333; font-size: 14px; text-align: left;"> SenzMate (Pvt) Ltd, <br> 27/1, 1/1, Melbourne Avenue, <br> Colombo 04, <br> Sri Lanka.</span>
+
+                                <div style="text-align: right; padding-bottom:16px ">
+                                    <a target="_blank" href="https://www.linkedin.com/company/senzmate-iot-solutions/">  <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/linkdin01.png"/></a>
+                                    <a target="_blank" href="https://www.facebook.com/SenzMate">    <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/facebook01.png"/> </a>
+                                    <a target="_blank" href="https://twitter.com/SenzMate">     <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/twitter01.png"/> </a>
+
+
+
+                                </div>
                             </td>
                         </tr>
 
@@ -545,7 +546,7 @@ function mailTempOtherConfirmation(){
       style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
 <span class="preheader"
       style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
-    Senzmate
+    SenzMate IoT Intelligence
 </span>
 <table border="0" cellpadding="0" cellspacing="0" class="body"
        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
@@ -555,11 +556,11 @@ function mailTempOtherConfirmation(){
             style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; Margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;">
             <div class="content"
                  style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
-                 
-                           <div style="padding: 20px;">
-               
-                <img  src="https://senzmate-website.s3.ap-south-1.amazonaws.com/senzmae-logo.jpeg" style="mix-blend-mode: multiply;"/>
-</div>
+
+                <div style="padding: 20px;">
+
+                    <img  src="https://senzmate-website.s3.ap-south-1.amazonaws.com/senzmae-logo.jpeg" style="mix-blend-mode: multiply;"/>
+                </div>
 
                 <!-- START CENTERED WHITE CONTAINER -->
                 <table class="main"
@@ -573,7 +574,7 @@ function mailTempOtherConfirmation(){
                                    style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                 <tr>
                                     <span class="apple-link"
-                                          style="color: #999999 !important; font-size: 12px; text-align: center;">Hi, <br>
+                                          style="color: #333333 !important; font-size: 16px; line-height: 24px; text-align: center;">Hi, <br>
                                                         Thank you for reaching us.<br><br>
 
                                                          We will make every effort to contact you as soon as possible.<br>
@@ -591,22 +592,22 @@ function mailTempOtherConfirmation(){
                 </table>
 
                 <!-- START FOOTER -->
-                <div class="footer" style="clear: both; Margin-top: 10px;  width: 100%;">
+                <div class="footer" style="clear: both;  width: 100%;">
                     <table border="0" cellpadding="0" cellspacing="0"
                            style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
-                        <tr>
+                        <tr style="background-color: #F7F9FC;">
                             <td class="content-block"
                                 style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 12px; color: #999999; padding-left: 20px;">
-                                <span class="apple-link" style="color: #999999; font-size: 12px; text-align: left;"> SenzMate (Pvt) Ltd, <br> 27/1, 1/1, Melbourne Avenue, <br> Colombo 04, <br> Sri Lanka.</span>
-                           <div style="text-align: center">
-                             <a target="_blank" href="https://www.linkedin.com/company/senzmate-iot-solutions/">  <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/linkdin.png"/></a>
-                            <a target="_blank" href="https://www.facebook.com/SenzMate">    <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/facebook.png"/> </a>
-                           <a target="_blank" href="https://twitter.com/SenzMate">     <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/twitter.png"/> </a>
-                           
-                               
-                               
-                                  </div>
-                               
+                                <span class="apple-link" style="color: #333333; font-size: 14px; line-height: 20px; text-align: left;"> SenzMate (Pvt) Ltd, <br> 27/1, 1/1, Melbourne Avenue, <br> Colombo 04, <br> Sri Lanka.</span>
+                                <div style="text-align: right; padding-bottom: 20px">
+                                    <a target="_blank" href="https://www.linkedin.com/company/senzmate-iot-solutions/">  <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/linkdin01.png"/></a>
+                                    <a target="_blank" href="https://www.facebook.com/SenzMate">    <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/facebook01.png"/> </a>
+                                    <a target="_blank" href="https://twitter.com/SenzMate">     <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/twitter01.png"/> </a>
+
+
+
+                                </div>
+
 
                             </td>
                         </tr>
@@ -741,10 +742,10 @@ function mailTempNewsLetterConfirmation(){
       style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
 <span class="preheader"
       style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
-    Senzmate
+    SenzMate IoT Intelligence
 </span>
 <table border="0" cellpadding="0" cellspacing="0" class="body"
-       style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
+       style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #F2F5F8;">
     <tr>
         <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">&nbsp;</td>
         <td class="container"
@@ -752,10 +753,10 @@ function mailTempNewsLetterConfirmation(){
             <div class="content"
                  style="box-sizing: border-box; display: block; Margin: 0 auto; max-width: 580px; padding: 10px;">
                 <div style="padding: 20px;">
-                
-                <img  src="https://senzmate-website.s3.ap-south-1.amazonaws.com/senzmae-logo.jpeg" style="mix-blend-mode: multiply;"/>
-</div>
-                    
+
+                    <img  src="https://senzmate-website.s3.ap-south-1.amazonaws.com/senzmae-logo.jpeg" style="mix-blend-mode: multiply;"/>
+                </div>
+
 
                 <!-- START CENTERED WHITE CONTAINER -->
                 <table class="main"
@@ -769,7 +770,7 @@ function mailTempNewsLetterConfirmation(){
                                    style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                 <tr>
                                     <span class="apple-link"
-                                          style="color: #999999; font-size: 12px; text-align: center;">Hi, <br>
+                                          style="color: #333333; font-size: 16px; text-align: center; line-height: 24px">Hi, <br>
                                         Thank you for subscribing to our newsletter! <br/>
                                         You will be notified once a month with new updates of our company. <br/>
 <br/><br/><br/>
@@ -786,24 +787,24 @@ function mailTempNewsLetterConfirmation(){
                 </table>
 
                 <!-- START FOOTER -->
-                <div class="footer" style="clear: both; Margin-top: 10px;  width: 100%;">
+                <div class="footer" style="clear: both;  width: 100%;">
                     <table border="0" cellpadding="0" cellspacing="0"
                            style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
-                        <tr>
+                        <tr style="background-color: #F7F9FC">
                             <td class="content-block"
                                 style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; padding-left: 20px; font-size: 12px; color: #999999;">
-                             
-                              <span class="apple-link" style="color: #999999; font-size: 12px; text-align: left;"> SenzMate (Pvt) Ltd, <br> 27/1, 1/1, Melbourne Avenue, <br> Colombo 04, <br> Sri Lanka.</span>
 
-                               <div style="text-align: center">
-                             <a target="_blank" href="https://www.linkedin.com/company/senzmate-iot-solutions/">  <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/linkdin.png"/></a>
-                            <a target="_blank" href="https://www.facebook.com/SenzMate">    <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/facebook.png"/> </a>
-                           <a target="_blank" href="https://twitter.com/SenzMate">     <img width="36px" style="padding: 5px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/twitter.png"/> </a>
-                           
-                               
-                               
-                                  </div>
-                               
+                                <span class="apple-link" style="color: #333333; line-height: 20px; font-size: 14px; text-align: left;"> SenzMate (Pvt) Ltd, <br> 27/1, 1/1, Melbourne Avenue, <br> Colombo 04, <br> Sri Lanka.</span>
+
+                                <div style="text-align: right;padding-bottom: 16px">
+                                    <a target="_blank" href="https://www.linkedin.com/company/senzmate-iot-solutions/">  <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/linkdin01.png"/></a>
+                                    <a target="_blank" href="https://www.facebook.com/SenzMate">    <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/facebook01.png"/> </a>
+                                    <a target="_blank" href="https://twitter.com/SenzMate">     <img width="20px" style="padding-right: 30px;" src="https://senzmate-website.s3.ap-south-1.amazonaws.com/twitter01.png"/> </a>
+
+
+
+                                </div>
+
                             </td>
                         </tr>
 
@@ -819,6 +820,7 @@ function mailTempNewsLetterConfirmation(){
 </table>
 </body>
 </html>
+
       `
   )
 }
@@ -938,6 +940,7 @@ function mailTempBookADemo(){
       style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
 <span class="preheader"
       style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
+      SenzMate IoT Intelligence
 </span>
 <table border="0" cellpadding="0" cellspacing="0" class="body"
        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
@@ -1117,7 +1120,7 @@ function mailTempGetInTouch(){
       style="background-color: #f6f6f6; font-family: sans-serif; -webkit-font-smoothing: antialiased; font-size: 14px; line-height: 1.4; margin: 0; padding: 0; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
 <span class="preheader"
       style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
-    Senzmate
+    SenzMate IoT Intelligence
 </span>
 <table border="0" cellpadding="0" cellspacing="0" class="body"
        style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background-color: #f6f6f6;">
@@ -1232,7 +1235,7 @@ app.post('/send-notification',(req, res) => {
     var mailOptionsConfirmation = {
       from: '"SenzMate" <keerthi@senzmate.com>',
       to: req.body.to,
-      subject: "Confirmation",
+      subject: "Confirmation of Receipt of Your Application",
       html:mailTempConfirmation(),
       bcc:'careers@senzmate.com'
     };
@@ -1251,7 +1254,7 @@ app.post('/send-notification',(req, res) => {
     var mailOptionsConfirmationNews = {
       from: '"SenzMate" <keerthi@senzmate.com>',
       to: req.body.to,
-      subject: "Confirmation",
+      subject: "Confirmation of Receipt of Your Application",
       html:mailTempNewsLetterConfirmation(),
       bcc:'info@senzmate.com'
     };
@@ -1270,7 +1273,7 @@ app.post('/send-notification',(req, res) => {
     var mailOptionsConfirmationOther = {
       from: '"SenzMate" <keerthi@senzmate.com>',
       to: req.body.to,
-      subject: "Confirmation",
+      subject: "Confirmation of Receipt of Your Application",
       html:mailTempOtherConfirmation(),
       bcc:'info@senzmate.com'
     };
@@ -1309,7 +1312,7 @@ app.post('/confirmation',(req, res) => {
   var mailOptionsConfirmation = {
     from: '"SenzMate" <keerthi@senzmate.com>',
     to: req.body.to,
-    subject: "Confirmation",
+    subject: "Confirmation of Receipt of Your Application",
     html:mailTempConfirmation(req.body.body,req.body.subject),
     bcc:'partnerships@senzmate.com'
   };
@@ -1329,7 +1332,7 @@ app.post('/book-a-demo',(req, res) => {
   var mailOptionsConfirmation = {
     from: '"SenzMate" <keerthi@senzmate.com>',
     to: req.body.to,
-    subject: "Confirmation",
+    subject: "Confirmation of Receipt of Your Application",
     html:mailTempBookADemo(),
     bcc:'partnerships@senzmate.com'
   };
@@ -1349,7 +1352,7 @@ app.post('/get-in-touch',(req, res) => {
   var mailOptionsConfirmation = {
     from: '"SenzMate" <keerthi@senzmate.com>',
     to: req.body.to,
-    subject: "Confirmation",
+    subject: "Confirmation of Receipt of Your Application",
     html:mailTempGetInTouch(),
     bcc:'partnerships@senzmate.com'
   };
