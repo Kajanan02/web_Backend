@@ -18,7 +18,7 @@ app.use(cors());
 const mail = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'info@senzmate.com',
+    user: 'jey@senzmate.com',
     pass: 'mfdeycpsvlwjcqje'
   }
 });
@@ -236,7 +236,7 @@ function mailTemp(text,subject){
   )
 }
 
-function mailTempConfirmation(){
+function mailTempConfirmation(name){
   return(
       `<!doctype html>
 <html>
@@ -380,7 +380,7 @@ SenzMate IoT Intelligence
                                    style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                 <tr>
                                     <span class="apple-link"
-                                          style="color: #333333; font-size: 16px; line-height: 24px; text-align: center;">Hi, <br>
+                                          style="color: #333333; font-size: 16px; line-height: 24px; text-align: center;">Hi ${name}, <br>
                                         Thanks for your interest to join our team. We are honored to have you in our journey. <br><br>
                                         We will reach you when your preference matches our requirement <br> <br>
                                        Sincerely.<br/>
@@ -399,7 +399,7 @@ SenzMate IoT Intelligence
                 <div class="footer" style="clear: both; width: 100%;">
                     <table border="0" cellpadding="0" cellspacing="0"
                            style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
-                        <tr style="background-color:  #F7F9FC;">
+                        <tr style="background-color:  #F7F9FC; width: 100%;">
                             <td class="content-block"
                                 style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; font-size: 14px; line-height: 20px; color: #333333; padding-left: 20px">
 
@@ -431,7 +431,7 @@ SenzMate IoT Intelligence
       `
   )
 }
-function mailTempOtherConfirmation(){
+function mailTempOtherConfirmation(name){
   return(
       `<!doctype html>
 <html>
@@ -574,7 +574,7 @@ function mailTempOtherConfirmation(){
                                    style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                 <tr>
                                     <span class="apple-link"
-                                          style="color: #333333 !important; font-size: 16px; line-height: 24px; text-align: center;">Hi, <br>
+                                          style="color: #333333 !important; font-size: 16px; line-height: 24px; text-align: center;">Hi ${name}, <br>
                                                         Thank you for reaching us.<br><br>
 
                                                          We will make every effort to contact you as soon as possible.<br>
@@ -790,7 +790,7 @@ function mailTempNewsLetterConfirmation(){
                 <div class="footer" style="clear: both;  width: 100%;">
                     <table border="0" cellpadding="0" cellspacing="0"
                            style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
-                        <tr style="background-color: #F7F9FC">
+                        <tr style="background-color: #F7F9FC; width: 100%;">
                             <td class="content-block"
                                 style="font-family: sans-serif; vertical-align: top; padding-bottom: 10px; padding-top: 10px; padding-left: 20px; font-size: 12px; color: #999999;">
 
@@ -1233,10 +1233,10 @@ app.post('/send-notification',(req, res) => {
 
   if (req.body.type === "CAREER") {
     var mailOptionsConfirmation = {
-      from: '"SenzMate" <info@senzmate.com>',
+      from: '"SenzMate IoT Intelligence" <careers@senzmate.com>',
       to: req.body.to,
       subject: "Confirmation of Receipt of Your Application",
-      html:mailTempConfirmation(),
+      html:mailTempConfirmation(req.body.name),
       bcc:'careers@senzmate.com'
     };
 
@@ -1252,7 +1252,7 @@ app.post('/send-notification',(req, res) => {
     });
   }else if(req.body.type === "NEWS LETTER") {
     var mailOptionsConfirmationNews = {
-      from: '"SenzMate" <info@senzmate.com>',
+      from: '"SenzMate IoT Intelligence" <info@senzmate.com>',
       to: req.body.to,
       subject: "Confirmation of Receipt of Your Application",
       html:mailTempNewsLetterConfirmation(),
@@ -1271,10 +1271,10 @@ app.post('/send-notification',(req, res) => {
     });
   }else {
     var mailOptionsConfirmationOther = {
-      from: '"SenzMate" <info@senzmate.com>',
+      from: '"SenzMate IoT Intelligence" <info@senzmate.com>',
       to: req.body.to,
       subject: "Confirmation of Receipt of Your Application",
-      html:mailTempOtherConfirmation(),
+      html:mailTempOtherConfirmation(req.body.name),
       bcc:'info@senzmate.com'
     };
 
