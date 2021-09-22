@@ -1237,7 +1237,7 @@ app.post('/send-notification',(req, res) => {
       to: req.body.to,
       subject: "Confirmation of Receipt of Your Application",
       html:mailTempConfirmation(req.body.name),
-      bcc:'careers@senzmate.com'
+      bcc:'info@senzmate.com'
     };
 
     mail.sendMail(mailOptionsConfirmation,function(err,response){
