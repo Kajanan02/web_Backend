@@ -1233,11 +1233,11 @@ app.post('/send-notification',(req, res) => {
 
   if (req.body.type === "CAREER") {
     var mailOptionsConfirmation = {
-      from: '"SenzMate IoT Intelligence" <careers@senzmate.com>',
+      from: '"SenzMate IoT Intelligence" <info@senzmate.com>',
       to: req.body.to,
       subject: "Confirmation of Receipt of Your Application",
       html:mailTempConfirmation(req.body.name),
-      bcc:'careers@senzmate.com'
+      bcc:'info@senzmate.com'
     };
 
     mail.sendMail(mailOptionsConfirmation,function(err,response){
