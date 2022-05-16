@@ -5,6 +5,8 @@ const multer = require('multer');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const base64 = require('base64topdf');
+const mongoose =require("mongoose");
+const request = require('request');
 
 
 const app = express();
@@ -22,6 +24,94 @@ const mail = nodemailer.createTransport({
     pass: 'mfdeycpsvlwjcqje'
   }
 });
+
+function articleID(id) {
+  const options = {
+    url: 'https://api.medium.com/@senzmate/'+id,
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: "Bearer 262511fcc9edf02db10fb601298a060355147b3f4339e796ac4f699e168d8cdd1",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, PUT, POST, DELETE, HEAD, OPTIONS",
+      Accept: "application/json",
+      "Accept-Charset": "utf-8",
+    }
+  };
+  return options
+}
+
+const Schema = mongoose.Schema
+
+
+const testCollectionSchema = new Schema({slug: {type: String,}}, {strict: false})
+app.post("/add", async ( req,res,next)=>{
+  let adas= await mongoose.model("articles", testCollectionSchema).find({})
+  console.log(adas)
+  await request({ url: 'http://52.142.47.126:1337/api/blogs'}, (error, response, body)=>{
+    if (!error && response.statusCode == 200) {
+      let dd =JSON.parse(body)
+      console.log(dd.data);
+      console.log(adas);
+      let addddddd = false
+      for(let i=0 ;i<dd.data.length; i++) {
+        const findData =   adas.findIndex((e) => e.attributes.article_id === dd.data[i].attributes.article_id);
+        if (findData === -1) {
+          request(articleID(dd.data[i].attributes.article_id), (error, response, bodys) => {
+            if (!error && response.statusCode == 200) {
+              let resa = {};
+              resa = JSON.parse(bodys.toString().slice(16));
+              // req.setHeader( "Content-Type", "application/json");
+              resa.attributes = dd.data[i].attributes
+              // req = JSON.stringify(bodys.toString().slice(16))
+              console.log(resa)
+              const TestCollection = mongoose.model('articles', testCollectionSchema)
+              const testCollectionData = new TestCollection(resa)
+              testCollectionData.save()
+              // return res.send(testCollectionData)
+            } else {
+              console.log(error)
+            }
+          });
+          addddddd =false
+        }else {
+          addddddd =true
+        }
+      }
+      if(addddddd){
+        res.send("already Added")
+      }else {
+        res.send("DB Saved")}
+    }else {
+      console.log(error)
+    }
+  });
+  // await res.json(resa)
+})
+
+// .get("/", async (req, res) => {
+//
+// });
+app.get("/article",async ( req,res,next)=>{
+  // const testCollectionSchema = new Schema({slug:{
+  //         type:String,
+  //     }}, { strict: false })
+
+  const findData = await mongoose.model("articles", testCollectionSchema).find();
+  res.json(findData);
+})
+
+
+app.listen(5000,()=>{
+  console.log("Server Started 5000");
+})
+
+mongoose.connect('mongodb+srv://Test_01:admin@testcluster.nyrf1.mongodb.net/medium?retryWrites=true&w=majority',(err)=>{
+  if(!err){
+    console.log("DB Connected SuccessFully")
+  }else {
+    console.log(err)
+  }
+})
 
 const schema = {
   "title":"send email",
